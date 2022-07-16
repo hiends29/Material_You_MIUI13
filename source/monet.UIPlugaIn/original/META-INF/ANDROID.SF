@@ -1,0 +1,20 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android)
+SHA1-Digest-Manifest: Rq7ZM6aykPxB6+8jel0nVHeELhs=
+X-Android-APK-Signed: 2,3
+
+Name: AndroidManifest.xml
+SHA1-Digest: AQF9XUYwavuBuLlHnZx3SvANApU=
+
+Name: res/drawable/ic_brightness_slider.xml
+SHA1-Digest: ACZZkRS5Fns+FbyLycDM1brkWgk=
+
+Name: res/drawable/ic_volume_slider_media_disabled.xml
+SHA1-Digest: tWNKeWfACejPrC8ovkhyPU8JwJE=
+
+Name: res/drawable/ic_volume_slider_media_enabled.xml
+SHA1-Digest: 8I52GKthA2aR6hwfq3nAJ/MGupg=
+
+Name: resources.arsc
+SHA1-Digest: vjj/urnEGhyVmi63PVg4z78PmvQ=
+

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+
+Name: AndroidManifest.xml
+SHA1-Digest: tm4LwtuEkobxJlM2HPTL+AHYH9M=
+
+Name: res/drawable/send_call_ic.xml
+SHA1-Digest: T3hjahxRJMFKpWVjsXR3i7aYr3U=
+
+Name: res/drawable/send_sms_ic.xml
+SHA1-Digest: PyozR8raJi8BZM8qpZFov3T5EXQ=
+
+Name: res/drawable/send_video_ic.xml
+SHA1-Digest: PrqUJyGhW5zP4rAeBadug+MsIVU=
+
+Name: resources.arsc
+SHA1-Digest: FVXRqoHYbswUOf+v6VY7F4mAGTY=
+

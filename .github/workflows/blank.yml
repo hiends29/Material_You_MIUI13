@@ -1,0 +1,31 @@
+name: MTY13
+
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+       - name: Checkout
+         uses: actions/checkout@v2
+       
+       - name: Setting up
+         run: |
+            sudo apt-get install -y git wget zip unzip zipalign apksigner
+            
+       - name: Set up TIMEZONE 
+         run: |
+            cd $GITHUB_WORKSPACE
+            echo "Setting Viename timezone"
+            sudo timedatectl set-timezone Asia/Ho_Chi_Minh
+            
+            
+       - name : RUNNING
+         run: |
+            sudo chmod 777 -R make.sh
+            ./make.sh ${{ github.actor }}        
+       - uses: actions/upload-artifact@v3
+         with:
+          name: $(ls *zip)
+          path: $(ls *zip)

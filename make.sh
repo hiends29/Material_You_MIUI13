@@ -24,15 +24,14 @@ done
 if [ -z "$(ls -A apk_out)" ]; then
    echo "Empty output"
 else
+
    echo "Making magisk module"
-   pwd
-   ls 
-   cd module
-   ls 
-   sudo chmod -R 755 module/system/product/overlay/
-   sudo cp -rf apk_out/. module/system/product/overlay/
-   sudo sed -i "s@abcxyz@$(date +"%H%M%d%m")@g" module/module.prop
-   sudo 7za a -tzip "$1_$(date +"%H%M%d%m")_MTYM13.zip" module/.
+   cp -rf module module_temp
+   mkdir -p module_temp/system/product/overlay/
+   cp -rf apk_out/. module_temp/system/product/overlay/
+   sed -i "s@abcxyz@$(date +"%H%M%d%m")@g" module_temp/module.prop
+   7za a -tzip "$1_$(date +"%H%M%d%m")_MTYM13.zip" module_temp/.
+   rm -rf module_temp
 fi
 
 

@@ -24,8 +24,10 @@ jobs:
        - name : RUNNING
          run: |
             sudo chmod 777 -R make.sh
-            ./make.sh ${{ github.actor }}        
+            ./make.sh ${{ github.actor }}  
+            echo "FILE_NAME=$( ls *.zip )" >> $GITHUB_ENV
+            
        - uses: actions/upload-artifact@v3
          with:
-          name: $(ls *zip)
-          path: $(ls *zip)
+          name: ${{ env.FILE_NAME }}
+          path: ${{ env.FILE_NAME }}

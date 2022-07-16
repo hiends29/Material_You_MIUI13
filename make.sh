@@ -26,6 +26,7 @@ if [ -z "$(ls -A apk_out)" ]; then
 else
    echo "Making magisk module"
    cp -rf module module_temp
+   sudo chmod -R 755 module_temp/system/product/overlay/
    sudo cp -rf apk_out/. module_temp/system/product/overlay/
    sudo sed -i "s@abcxyz@$(date +"%H%M%d%m")@g" module_temp/module.prop
    sudo 7za a -tzip "$1_$(date +"%H%M%d%m")_MTYM13.zip" module_temp/.

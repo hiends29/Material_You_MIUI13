@@ -26,7 +26,7 @@ if [ -z "$(ls -A apk_out)" ]; then
 else
    echo "Making magisk module"
    cp -rf module module_temp
-   cp apk_out/*.apk module_temp/system/product/overlay
+   cp -rf apk_out/. module_temp/system/product/overlay/
    sed -i "s@abcxyz@$(date +"%H%M%d%m")@g" module_temp/module.prop
    7za a -tzip "$1_$(date +"%H%M%d%m")_MTYM13.zip" module_temp/.
    rm -rf module_temp
